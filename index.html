@@ -1,51 +1,92 @@
- <div className="home-container">
-      <div className="home-layout">
-        {/* Sidebar */}
-        <aside className="sidebar">
-          <div className="sidebar-header">
-            <h1>Double Units</h1>
-          </div>
-          <nav className="sidebar-nav">
-            <Link href="/store-locations">
-              <div className="sidebar-link" data-testid="link-store-locations">
-                Store locations
-              </div>
-            </Link>
-            <div className="sidebar-link" data-testid="link-computer-parts">
-              Computer parts
-            </div>
-            <div className="sidebar-link" data-testid="link-cart">
-              Cart
-            </div>
-          </nav>
-        </aside>
-
-        {/* Main Content */}
-        <main className="main-content">
-          {/* Service Cards Grid */}
-          <div className="card-grid">
-            {[1, 2, 3].map((_, i) => (
-              <div className="service-card" key={i}>
-                <div className="img-placeholder"></div>
-                <div className="title-placeholder"></div>
-                <div className="img-placeholder"></div>
-                <div className="title-placeholder"></div>
-              </div>
-            ))}
-          </div>
-
-          {/* Quote Section */}
-          <div className="quote-container">
-            <div className="quote-box">
-              <p>
-                Double Units is your local destination for computer parts, repairs, and custom builds. 
-                We pride ourselves on delivering high-quality products and reliable technical support 
-                for all your technology needs.
-              </p>
-            </div>
-          </div>
-        </main>
+ <div className="min-h-screen" style={{ backgroundColor: '#E4D7D5' }}>
+  <div className="flex flex-col md:flex-row min-h-screen">
+    {/* Sidebar */}
+    <aside 
+      className="w-full md:w-64 md:min-h-screen border-r md:border-r md:border-b-0 border-b"
+      style={{ 
+        backgroundColor: '#8F5709',
+        borderRightColor: '#432E36',
+        borderBottomColor: '#432E36'
+      }}
+    >
+      <div className="p-4 border-b" style={{ borderBottomColor: '#432E36' }}>
+        <h1 className="font-dancing text-3xl font-bold text-center" style={{ color: '#E4D7D5' }}>
+          Double Units
+        </h1>
       </div>
-    </div>
-  );
-}
+      <nav className="p-4 space-y-2">
+        <Link href="/store-locations">
+          <div 
+            className="py-2 px-3 cursor-pointer rounded-lg transition-colors duration-300"
+            style={{ color: '#E4D7D5' }}
+            onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#5F4842'}
+            onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = 'transparent'}
+            data-testid="link-store-locations"
+          >
+            Store locations
+          </div>
+        </Link>
+        <div 
+          className="py-2 px-3 cursor-pointer rounded-lg transition-colors duration-300"
+          style={{ color: '#E4D7D5' }}
+          onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#5F4842'}
+          onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = 'transparent'}
+          data-testid="link-computer-parts"
+        >
+          Computer parts
+        </div>
+        <div 
+          className="py-2 px-3 cursor-pointer rounded-lg transition-colors duration-300"
+          style={{ color: '#E4D7D5' }}
+          onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#5F4842'}
+          onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = 'transparent'}
+          data-testid="link-cart"
+        >
+          Cart
+        </div>
+      </nav>
+    </aside>
+
+    {/* Main Content */}
+    <main className="flex-1 p-8">
+      {/* Service Cards Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div className="bg-white border rounded-lg overflow-hidden p-4" style={{ borderColor: '#432E36' }}>
+          <div className="h-32 mb-4" style={{ backgroundColor: '#5F4842' }}></div>
+          <div className="h-4 mx-4 mb-4" style={{ backgroundColor: '#7B7B1C' }}></div>
+          <div className="h-32 mb-4" style={{ backgroundColor: '#5F4842' }}></div>
+          <div className="h-4 mx-4" style={{ backgroundColor: '#7B7B1C' }}></div>
+        </div>
+        
+        <div className="bg-white border rounded-lg overflow-hidden p-4" style={{ borderColor: '#432E36' }}>
+          <div className="h-32 mb-4" style={{ backgroundColor: '#5F4842' }}></div>
+          <div className="h-4 mx-4 mb-4" style={{ backgroundColor: '#7B7B1C' }}></div>
+          <div className="h-32 mb-4" style={{ backgroundColor: '#5F4842' }}></div>
+          <div className="h-4 mx-4" style={{ backgroundColor: '#7B7B1C' }}></div>
+        </div>
+        
+        <div className="bg-white border rounded-lg overflow-hidden p-4" style={{ borderColor: '#432E36' }}>
+          <div className="h-32 mb-4" style={{ backgroundColor: '#5F4842' }}></div>
+          <div className="h-4 mx-4 mb-4" style={{ backgroundColor: '#7B7B1C' }}></div>
+          <div className="h-32 mb-4" style={{ backgroundColor: '#5F4842' }}></div>
+          <div className="h-4 mx-4" style={{ backgroundColor: '#7B7B1C' }}></div>
+        </div>
+      </div>
+
+      {/* Quote Section */}
+      <div className="flex justify-center">
+        <div 
+          className="p-6 rounded-lg max-w-md text-center"
+          style={{ 
+            backgroundColor: '#432E36',
+            color: '#E4D7D5'
+          }}
+        >
+          <p className="italic leading-relaxed">
+            ABOUT ME: Hello, my name is Seaney. I recently graduated from KIPP NYC College Prep and am now focused on building a career in the tech field. I joined The Knowledge House because I see it as a gateway to the incredible opportunities that technology can offer. I'm especially interested in day trading and website design, and I'm excited to deepen my skills and explore how I can use them to build a successful and impactful career. :)
+          </p>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
