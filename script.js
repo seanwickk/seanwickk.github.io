@@ -1,49 +1,7 @@
- <div className="home-container">
-      <div className="home-layout">
-        {/* Sidebar */}
-        <aside className="sidebar">
-          <div className="sidebar-header">
-            <h1>Double Units</h1>
-          </div>
-          <nav className="sidebar-nav">
-            <Link href="/store-locations">
-              <div className="sidebar-link" data-testid="link-store-locations">
-                Store locations
-              </div>
-            </Link>
-            <div className="sidebar-link" data-testid="link-computer-parts">
-              Computer parts
-            </div>
-            <div className="sidebar-link" data-testid="link-cart">
-              Cart
-            </div>
-          </nav>
-        </aside>
-
-        {/* Main Content */}
-        <main className="main-content">
-          {/* Service Cards Grid */}
-          <div className="card-grid">
-            {[1, 2, 3].map((_, i) => (
-              <div className="service-card" key={i}>
-                <div className="img-placeholder"></div>
-                <div className="title-placeholder"></div>
-                <div className="img-placeholder"></div>
-                <div className="title-placeholder"></div>
-              </div>
-            ))}
-          </div>
-
-          {/* Quote Section */}
-          <div className="quote-container">
-            <div className="quote-box">
-              <p>
-                ABOUT ME: Hello, my name is Seaney. I recently graduated from KIPP NYC College Prep and am now focused on building a career in the tech field. I joined The Knowledge House because I see it as a gateway to the incredible opportunities that technology can offer. I'm especially interested in day trading and website design, and I'm excited to deepen my skills and explore how I can use them to build a successful and impactful career. :)
-              </p>
-            </div>
-          </div>
-        </main>
-      </div>
-    </div>
+import { Link } from "wouter";
+export default function Home() {
+  return (
+      );
+}
   );
 }
