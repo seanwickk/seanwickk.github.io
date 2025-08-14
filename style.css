@@ -1,48 +1,66 @@
-<div className="home-container">
-      <div className="home-layout">
-        <aside className="sidebar">
-          <div className="sidebar-header">
-            <h1>Double Units</h1>
-          </div>
-          <nav className="sidebar-nav">
-            <Link href="/store-locations">
-              <div className="sidebar-link" data-testid="link-store-locations">
-                Store locations
-              </div>
-            </Link>
-            <div className="sidebar-link" data-testid="link-computer-parts">
-              Computer parts
-            </div>
-            <div className="sidebar-link" data-testid="link-cart">
-              Cart
-            </div>
-          </nav>
-        </aside>
+:root {
+  --color-bg: #fafafa;
+  --color-text: #0a0a0a;
+  --color-primary: #8b4513;
+  --color-primary-light: #a0522d;
+  --color-border: #d1d1d1;
+}
 
-      
-        <main className="main-content">
-          
-          <div className="card-grid">
-            {[1, 2, 3].map((_, i) => (
-              <div className="service-card" key={i}>
-                <div className="img-placeholder"></div>
-                <div className="title-placeholder"></div>
-                <div className="img-placeholder"></div>
-                <div className="title-placeholder"></div>
-              </div>
-            ))}
-          </div>
+.dark {
+  --color-bg: #0a0a0a;
+  --color-text: #f5f5f5;
+  --color-primary: #d2691e;
+  --color-primary-light: #ff8c00;
+  --color-border: #333;
+}
 
-         
-          <div className="quote-container">
-            <div className="quote-box">
-              <p>
-                ABOUT ME: Hello, my name is Seaney. I recently graduated from KIPP NYC College Prep and am now focused on building a career in the tech field. I joined The Knowledge House because I see it as a gateway to the incredible opportunities that technology can offer. I'm especially interested in day trading and website design, and I'm excited to deepen my skills and explore how I can use them to build a successful and impactful career. :)
-              </p>
-            </div>
-          </div>
-        </main>
-      </div>
-    </div>
-  );
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .font-dancing {
+    font-family: 'Dancing Script', cursive;
+  }
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-primary-light {
+  background-color: var(--color-primary-light);
+}
+
+.hover\:bg-primary:hover {
+  background-color: var(--color-primary);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-in-out;
 }
