@@ -1,1 +1,51 @@
+ <div className="home-container">
+      <div className="home-layout">
+        {/* Sidebar */}
+        <aside className="sidebar">
+          <div className="sidebar-header">
+            <h1>Double Units</h1>
+          </div>
+          <nav className="sidebar-nav">
+            <Link href="/store-locations">
+              <div className="sidebar-link" data-testid="link-store-locations">
+                Store locations
+              </div>
+            </Link>
+            <div className="sidebar-link" data-testid="link-computer-parts">
+              Computer parts
+            </div>
+            <div className="sidebar-link" data-testid="link-cart">
+              Cart
+            </div>
+          </nav>
+        </aside>
 
+        {/* Main Content */}
+        <main className="main-content">
+          {/* Service Cards Grid */}
+          <div className="card-grid">
+            {[1, 2, 3].map((_, i) => (
+              <div className="service-card" key={i}>
+                <div className="img-placeholder"></div>
+                <div className="title-placeholder"></div>
+                <div className="img-placeholder"></div>
+                <div className="title-placeholder"></div>
+              </div>
+            ))}
+          </div>
+
+          {/* Quote Section */}
+          <div className="quote-container">
+            <div className="quote-box">
+              <p>
+                Double Units is your local destination for computer parts, repairs, and custom builds. 
+                We pride ourselves on delivering high-quality products and reliable technical support 
+                for all your technology needs.
+              </p>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  );
+}
